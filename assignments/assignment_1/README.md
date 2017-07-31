@@ -9,6 +9,7 @@ Run the program `assignment_1.py` from **within your virtual machine**. Do neith
 
 ## Hints:
 
+  * The easiest way to come up and running is by cloning this repository to your computer, create the virtual machine (VM) if you have not done so, log onto the VM, and change to the corresponding directory with this task.
   * To run the program sucessfully you need to be connected to the internet.
   * You can run the program either from the command-line `$ python assignment_1.py` or from within a notebook by importing `assignment_1.py` via:
   ```
