@@ -1,0 +1,42 @@
+  * Ved Volden 5, 5. TV; 1425 København K	4000000	91
+  * Rådhusstræde 4C, 1; 1466 København K	4895000	105
+  * Store Kongensgade 112A, 3; 1264 København K	250000	135
+  * Amaliegade 13G, 2; 1256 København K	7375000	98
+  * Borgergade 144, 3. TH; 1300 København K	5825000	101
+  * Nørre Søgade 9A, 1. TH; 1370 København K	1126250	107
+  * Wildersgade 22, ST; 1408 København K	1556700	88
+  * Toldbodgade 10A, 1; 1253 København K	3750000	184
+  * Andreas Bjørns Gade 4, 3. TH; 1428 København K	1700000	54
+  * Sølvgade 15, 4. TH; 1307 København K	4215000	81
+  * Linnésgade 16A, 1; 1361 København K	6300000	155
+  * Store Kongensgade 63A, ST. 4; 1264 København K	1780000	98
+  * Peder Skrams Gade 28, 2. TV; 1054 København K	4080000	76
+  * Brobergsgade 14, 1. TV; 1427 København K	2750000	50
+  * Sølvgade 13, 2. TV; 1307 København K	3150000	73
+  * Ny Adelgade 9, 2. TH; 1104 København K	1950000	70
+  * Lavendelstræde 9, 2. TV; 1462 København K	1550000	66
+  * Åbenrå 10, 2. 5; 1124 København K	1650000	70
+  * Grønnegade 31, 3. TV; 1107 København K	1200000	49
+  * Badstuestræde 16, 2; 1209 København K	2700000	97
+  * Nørre Voldgade 70, 4; 1358 København K	1870000	99
+  * Fredericiagade 25, 5. 1; 1310 København K	3150000	118
+  * Sølvgade 19, 2. MF; 1307 København K	2425000	49
+  * David Balfours Gade 3, ST. TV; 1402 København K	3100000	83
+  * Vimmelskaftet 36A, 3. TH; 1161 København K	3695000	84
+  * Store Kongensgade 110C, 3. TV; 1264 København K	3050000	118
+  * Andreas Bjørns Gade 10, 3. TV; 1428 København K	2367000	53
+  * Grønnegade 31, 4; 1107 København K	3950000	73
+  * Peder Skrams Gade 27, 3. TH; 1054 København K	6250000	112
+  * Andreas Bjørns Gade 22, 3. TH; 1428 København K	2900000	55
+  * Kronprinsessegade 10, 4. TV; 1306 København K	4350000	101
+  * Bartholinsgade 11, 1. TV; 1356 København K	841000	52
+  * Sankt Peders Stræde 17, 2; 1453 København K	4125000	106
+  * Ved Volden 11, 4. TH; 1425 København K	4900000	97
+  * Luftmarinegade 38; 1432 København K	2485131	137
+  * Gernersgade 5, ST. TV; 1319 København K	1950000	37
+  * Ahlefeldtsgade 26, 4. TV; 1359 København K	2115000	82
+  * Dronningens Tværgade 36, 4. 1; 1302 København K	1785000	82
+  * Nikolajgade 20, 2. TV; 1068 København K	3500000	92
+  * Strandgade 12, 3; 1401 København K	7170000	228
+  * Store Kongensgade 90, 2. TH; 1264 København K	7500000	158
+  * Gothersgade 147, 3. TV; 1123 København K	3622500	68
