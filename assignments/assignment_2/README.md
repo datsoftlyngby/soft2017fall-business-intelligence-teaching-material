@@ -22,9 +22,8 @@ To scrape the complete dataset, you have to store all Danish housing sales recor
 
   1. **OBS:** _**Do not**_ scrape directly from http://www.boliga.dk as this might put a too high load on their servers and as they might block your IP. Instead scrape the data from a mirror http://<TODO: insert server IP>/boliga. On that mirror you will find an HTML pages that have a name like `<ZIP_NUMBER>_<PAGE_INDEX>.html` for example `http://<IP>/boliga/4000_2.html` or `http://165.227.137.1/boliga/1050-1049_1.html`.
   2. Make your scraper robust, so that it does not crash in case of unexpectet values in a sales record.
-  3. In case you saved your scraped data in a CSV file per ZIP code, you can count the lines per file and receive a total line count with the help of the `find`and `xagrs` commands, e.g., `$ find . -name '*.csv' | xargs wc -l`. Otherwise, in case you have a single CSV file you can count the lines directly via `$ cat boliga_all.csv | wc -l`
+  3. In case you saved your scraped data in a CSV file per ZIP code, you can count the lines per file and receive a total line count with the help of the `find`and `xagrs` commands, e.g., `$ find . -name '*.csv' | xargs wc -l`. Otherwise, in case you have a single CSV file you can count the lines directly via `$ cat boliga_all.csv | wc -l`.
   In the former case you should get counts similar to the following:
-
   ```bash
   $ find . -name '*.csv' | xargs wc -l
       6233 ./boliga_1050-1549.csv
