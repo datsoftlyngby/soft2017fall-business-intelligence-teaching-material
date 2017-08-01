@@ -4,10 +4,6 @@ The `Vagrantfile` in this folder specifies the virtual machine (VM), which you w
 
 ## Getting started with Vagrant
 
-You need this `Vagrantfile` **TODO: add Link**, which will provide you with an 
-
-### What do I need?
-
 In the following is a step by step guide to get you up and running.
 
   * Download and install VirtualBox (https://www.virtualbox.org/wiki/Downloads)
@@ -38,6 +34,7 @@ or alternatively install Git on Windows and follow the directions: http://stacko
   vagrant@vagrant:~$ cd /synced_folder/lecture_notes
 vagrant@vagrant:~$ notebook
   ```
+    
     * **Note** The `notebook` command is just an alias to the complete command `jupyter notebook --no-browser --ip=0.0.0.0 --NotebookApp.token=""` The `notebook` command is context sensitive. That is, the server is always started in the scope of the current directory. When you have your notebooks stored in another directory than the one in which you execute `notebook`, then you have change directories before.
     
   * Now you should be able to connect to the Jupyter Notebook server by connecting to http://localhost:8888 in the browser of your choice. 
