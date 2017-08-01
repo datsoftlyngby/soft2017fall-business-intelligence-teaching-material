@@ -34,8 +34,7 @@ or alternatively install Git on Windows and follow the directions: http://stacko
   vagrant@vagrant:~$ cd /synced_folder/lecture_notes
 vagrant@vagrant:~$ notebook
   ```
-    
-    * **Note** The `notebook` command is just an alias to the complete command `jupyter notebook --no-browser --ip=0.0.0.0 --NotebookApp.token=""` The `notebook` command is context sensitive. That is, the server is always started in the scope of the current directory. When you have your notebooks stored in another directory than the one in which you execute `notebook`, then you have change directories before.
+    - **Note** The `notebook` command is just an alias to the complete command `jupyter notebook --no-browser --ip=0.0.0.0 --NotebookApp.token=""` The `notebook` command is context sensitive. That is, the server is always started in the scope of the current directory. When you have your notebooks stored in another directory than the one in which you execute `notebook`, then you have change directories before.
     
   * Now you should be able to connect to the Jupyter Notebook server by connecting to http://localhost:8888 in the browser of your choice. 
   * In case you are done working on your virtual machine, you can leave it by issuing the `exit` command. Subsequently, you can put the virtual machine to "sleep" (just like closing the lid of your notebook) by running `vagrant suspend` on your host machine.
