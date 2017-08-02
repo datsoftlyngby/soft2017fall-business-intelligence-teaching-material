@@ -3,7 +3,9 @@ import csv
 import requests
 import platform
 import statistics
-# import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('agg')
+import matplotlib.pyplot as plt
 
 
 def download_txt(url, save_path='./downloaded'):
@@ -13,7 +15,7 @@ def download_txt(url, save_path='./downloaded'):
 
 
 def generate_csv(txt_input_path, csv_output_path):
-    with open(txt_input_path) as f:
+    with open(txt_input_path, encoding='utf-8') as f:
         txt_content = f.readlines()
 
     rows = [['street', 'city', 'price', 'sqm', 'price_per_sqm']]
@@ -30,14 +32,14 @@ def generate_csv(txt_input_path, csv_output_path):
     else:
         newline=None
 
-    with open(csv_output_path, 'w', newline=newline) as f:
+    with open(csv_output_path, 'w', newline=newline, encoding='utf-8') as f:
         output_writer = csv.writer(f)
         for row in rows:
             output_writer.writerow(row)
 
 
 def read_prices(csv_input_path):
-    with open(csv_input_path) as f:
+    with open(csv_input_path, encoding='utf-8') as f:
         reader = csv.reader(f)
         _ = next(reader)
 
@@ -51,12 +53,11 @@ def read_prices(csv_input_path):
     return list(zip(idxs, prices))
 
 
-
 def compute_avg_price(data):
     _, prices = zip(*data)
     avg_price = statistics.mean(prices)
 
-    with open('/tmp/avg_price.txt', 'w') as f:
+    with open('/tmp/avg_price.txt', 'w', encoding='utf-8') as f:
         f.write(str(avg_price))
 
     return avg_price
@@ -64,8 +65,10 @@ def compute_avg_price(data):
 
 def generate_plot(data):
 
-    x_values, y_values = data
+    x_values, y_values = zip(*data)
+    fig = plt.figure()
     plt.scatter(x_values, y_values, s=100)
+    fig.savefig('./prices.png', bbox_inches='tight')
 
 
 def run():
@@ -81,10 +84,8 @@ def run():
     data = read_prices(csv_path)
     avg_price = compute_avg_price(data)
     print(avg_price)
-    # genrate_plot(data)
+    generate_plot(data)
 
 
 if __name__ == '__main__':
     run()
-
-
