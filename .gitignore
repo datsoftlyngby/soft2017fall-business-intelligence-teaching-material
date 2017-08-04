@@ -3,6 +3,7 @@ ubuntu-xenial-16.04-cloudimg-console.log
 notebooks/.ipynb_checkpoints/
 notebooks/geckodriver.log
 notebooks/__pycache__/
+notebooks/api_keys.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
