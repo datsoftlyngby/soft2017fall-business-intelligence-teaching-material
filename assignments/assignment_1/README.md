@@ -3,15 +3,15 @@
 Run the program `assignment_1.py` from **within your virtual machine**. Do neither run it in a local Python installation nor in a notebook on Azure!
 
   1. Describe what files this program generates and attach the contents of each file together with its name to your solution.
-  2. What is the output of this program.
-  3. Describe in natural language and line-by-line what the program. Describe also for each line what the Python code expresses.
+  2. What is the output of this program?
+  3. Describe in natural language and line-by-line what the program is doing. Describe also for each line what the Python code expresses.
 
 
 ## Hints:
 
   * The easiest way to come up and running is by cloning this repository to your computer, create the virtual machine (VM) if you have not done so, log onto the VM, and change to the corresponding directory with this task.
   * To run the program sucessfully you need to be connected to the internet.
-  * You can run the program either from the command-line `$ python assignment_1.py` or from within a notebook by importing `assignment_1.py` via:
+  * You can run the program either from the command-line `$ python assignment_1.py` or from within a notebook or the REPL by importing `assignment_1.py` via:
   ```
   import assignment_1
 

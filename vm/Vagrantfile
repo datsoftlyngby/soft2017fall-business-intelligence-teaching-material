@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
   # The following is adapted from
   # http://stackoverflow.com/a/37335639
   config.vm.provider "virtualbox" do |vb|
-    mem_ratio = 3/4
+    mem_ratio = 1/2
     cpu_exec_cap = 75
     host = RbConfig::CONFIG['host_os']
     # Give VM 3/4 system memory & access to all cpu cores on the host
@@ -59,9 +59,18 @@ Vagrant.configure("2") do |config|
       cpus = `nproc`.to_i
       # meminfo shows KB and we need to convert to MB
       mem = `grep 'MemTotal' /proc/meminfo | sed -e 's/MemTotal://' -e 's/ kB//'`.to_i / 1024 * mem_ratio
-    else # Windows folks
+    elsif host =~ /mingw/
       cpus = `wmic cpu get NumberOfCores`.split("\n")[2].to_i
       mem = `wmic OS get TotalVisibleMemorySize`.split("\n")[2].to_i / 1024 * mem_ratio
+    else
+      cpus = 1
+      mem = 2096128
+    end
+
+    if mem == 0
+      # Just as a backup in case something went wrong above...
+      cpus = 1
+      mem = 2096128   
     end
 
     if cpus == 2
@@ -69,6 +78,7 @@ Vagrant.configure("2") do |config|
     elsif cpus > 2
       cpus = cpus - 2
     end
+    
     # puts(mem)
     # puts(mem/1024)
     # puts(mem/1024^2)
@@ -107,36 +117,25 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y git
     sudo apt-get install -y wget
 
-    echo "Think about installing MonoDevelop..."
-
-    echo "Installing Java..."
-    sudo apt-get -y install software-properties-common
-    sudo add-apt-repository ppa:webupd8team/java
-    sudo apt-get -y update
-    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-    sudo apt-get -y install oracle-java8-installer
-    sudo update-java-alternatives -s java-8-oracle
-
-    echo "Installing Go..."
-    wget https://storage.googleapis.com/golang/go1.7.3.linux-amd64.tar.gz
-    sudo tar -C /usr/local -xzf go1.7.3.linux-amd64.tar.gz
-    echo "export PATH=$PATH:/usr/local/go/bin" >> $HOME/.profile
-    echo "export GOPATH=/go_projects" >> $HOME/.profile
-
     echo "Installing Anaconda..."
     sudo wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh -O ~/Anaconda3-4.4.0-Linux-x86_64.sh
     sudo bash ~/Anaconda3-4.4.0-Linux-x86_64.sh -b
     
     sudo echo ". $HOME/.bashrc" >> $HOME/.bash_profile
     sudo echo "export PATH=$HOME/anaconda3/bin:$PATH" >> $HOME/.bash_profile
-    sudo echo "alias notebook='jupyter notebook --no-browser --ip=0.0.0.0 --NotebookApp.token=\\"\\"'" >> $HOME/.bash_profile
-  
+    sudo echo "alias notebook='jupyter notebook --no-browser --ip=0.0.0.0 --NotebookApp.token=\\"\\" --NotebookApp.iopub_data_rate_limit=10000000000'" >> $HOME/.bash_profile
+
     export PATH="$HOME/anaconda3/bin:$PATH"
 
     # TODO: chown for /home/ubuntu/anaconda3 or add ubuntu user to group to install packages without sudo
-    sudo conda install -y keras
-    sudo $HOME/anaconda3/bin/conda install -y nltk
-    sudo $HOME/anaconda3/bin/pip install suplemon
+    $(which conda) install -y keras
+    $(which conda) install -y basemap
+    $(which conda) install -y nltk
+
+    $(which pip) install suplemon
+    $(which pip) install folium
+    $(which pip) install osmread
+
 
     # this package is necessary for matplotlib to work and not installed by 
     # default
