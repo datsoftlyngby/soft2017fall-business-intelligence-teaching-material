@@ -128,13 +128,13 @@ Vagrant.configure("2") do |config|
     export PATH="$HOME/anaconda3/bin:$PATH"
 
     # TODO: chown for /home/ubuntu/anaconda3 or add ubuntu user to group to install packages without sudo
-    $(which conda) install -y keras
-    $(which conda) install -y basemap
-    $(which conda) install -y nltk
+    sudo $(which conda) install -y keras
+    sudo $(which conda) install -y basemap
+    sudo $(which conda) install -y nltk
 
-    $(which pip) install suplemon
-    $(which pip) install folium
-    $(which pip) install osmread
+    sudo $(which pip) install suplemon
+    sudo $(which pip) install folium
+    sudo $(which pip) install osmread
 
 
     # this package is necessary for matplotlib to work and not installed by 
