@@ -119,7 +119,8 @@ Vagrant.configure("2") do |config|
 
     echo "Installing Anaconda..."
     sudo wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh -O ~/Anaconda3-4.4.0-Linux-x86_64.sh
-    sudo bash ~/Anaconda3-4.4.0-Linux-x86_64.sh -b
+    # Anaconda should not be installed as root as earlier...
+    bash ~/Anaconda3-4.4.0-Linux-x86_64.sh -b
     
     sudo echo ". $HOME/.bashrc" >> $HOME/.bash_profile
     sudo echo "export PATH=$HOME/anaconda3/bin:$PATH" >> $HOME/.bash_profile
@@ -128,13 +129,13 @@ Vagrant.configure("2") do |config|
     export PATH="$HOME/anaconda3/bin:$PATH"
 
     # TODO: chown for /home/ubuntu/anaconda3 or add ubuntu user to group to install packages without sudo
-    sudo $(which conda) install -y keras
-    sudo $(which conda) install -y basemap
-    sudo $(which conda) install -y nltk
+    $(which conda) install -y keras
+    $(which conda) install -y basemap
+    $(which conda) install -y nltk
 
-    sudo $(which pip) install suplemon
-    sudo $(which pip) install folium
-    sudo $(which pip) install osmread
+    $(which pip) install suplemon
+    $(which pip) install folium
+    $(which pip) install osmread
 
 
     # this package is necessary for matplotlib to work and not installed by 
