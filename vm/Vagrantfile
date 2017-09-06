@@ -132,6 +132,7 @@ Vagrant.configure("2") do |config|
     $(which conda) install -y keras
     $(which conda) install -y basemap
     $(which conda) install -y nltk
+    $(which conda) install -y netcdf4
 
     $(which pip) install suplemon
     $(which pip) install folium
