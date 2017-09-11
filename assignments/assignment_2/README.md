@@ -73,3 +73,4 @@ To scrape the complete dataset, you have to store all Danish housing sales recor
    5901 total
    ```
    4. Keep the data, which you scraped in CSV format. We will use it in the remainder of this course!
+   5. In case your scraper crashes after some time because it eats up all memory, you might consider a Bash script, which wraps your Python scraper and which calls it with an argument per zip code area. That will create a new process for each zip code area and it will guarantee that there is sufficient free memory for your scraper to work.
