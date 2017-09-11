@@ -3,6 +3,7 @@ ubuntu-xenial-16.04-cloudimg-console.log
 lecture_notes/.ipynb_checkpoints/
 lecture_notes/__pycache__/
 lecture_notes/api_keys.py
+lecture_notes/data/out/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
