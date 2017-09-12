@@ -2,7 +2,7 @@
 
 Your task is to scrape a complete dataset of historical Danish housing sales data.
 
-The data comes originally from http://www.boliga.dk/salg. To get an impression of the data, point your browser to that page and select for example `1050-1049 København K` as `Postnr:` and `1992` as `Vejnavn:` (just keep `Boligtype:` and `Fra:` field with their default values). After hitting the green `Søg` button, you will be directed to a page with the following URL http://www.boliga.dk/salg/resultater?so=1&sort=omregnings_dato-d&maxsaledate=today&iPostnr=1050-1549&gade=&type=&minsaledate=1992  and that looks similar to the following:
+The data comes originally from http://www.boliga.dk/salg. To get an impression of the data, point your browser to that page and select for example `1050-1049 København K` as `Postnr:` and `1992` as `Fra:` (just keep `Boligtype:` and `Vejnavn:` field with their default values). After hitting the green `Søg` button, you will be directed to a page with the following URL http://www.boliga.dk/salg/resultater?so=1&sort=omregnings_dato-d&maxsaledate=today&iPostnr=1050-1549&gade=&type=&minsaledate=1992  and that looks similar to the following:
 ![data_screenshot](images/data_screenshot.png)
 
 On that page you will find a paginated list with 40 entries per page and in total more than 6400 historical housing sales records for Copenhagen's city center.
@@ -16,8 +16,7 @@ To scrape the complete dataset, you have to store all Danish housing sales recor
   
   ```
   address,zip_code,price,sell_date,sell_type,price_per_sq_m,no_rooms,housing_type,size_in_sq_m,year_of_construction,price_change_in_pct
-  ```
-
+  ```,
   where each column corresponds to the header of the tables in the HTML pages 
 
   ```
