@@ -18,11 +18,11 @@ To scrape the complete dataset, you have to store all Danish housing sales recor
   address,zip_code,price,sell_date,sell_type,price_per_sq_m,no_rooms,housing_type,size_in_sq_m,year_of_construction,price_change_in_pct
   ```
 
-  
+
   where each column corresponds to the header of the tables in the HTML pages 
 
   ```
-  _Adresse / Postnr | Købesum | Dato / Type | kr/m² | Rum | Boligtype | m² | Bygget | %_
+  Adresse / Postnr | Købesum | Dato / Type | kr/m² | Rum | Boligtype | m² | Bygget | %
   ```
 
   Furthermore, each row in a table of an HTML page becomes a row in a corresponding CSV file.
