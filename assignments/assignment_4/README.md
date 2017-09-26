@@ -9,7 +9,7 @@
   4. Create a histogram (bar plot), which visualizes the frequency of house trades per zip code area corresponding to the entire dataset of housing sale records.
   5. Create a cumulatve histogram, which visualizes the frequency of house trades per zip code area corresponding to the entire dataset of housing sale records and the vertical bars are colored to the frequency of rooms per sales record. That is, a plot similar to the following, where single rooms are in the bottom and two room frequencies on top, etc. See, http://matplotlib.org/1.3.0/examples/pylab_examples/histogram_demo_extended.html for example.
 
-    ![](http://matplotlib.org/1.3.0/mpl_examples/pylab_examples/histogram_demo_extended_04.png)
+  ![](http://matplotlib.org/1.3.0/mpl_examples/pylab_examples/histogram_demo_extended_04.png)
 
   6. Now, you create a 3D histogram, in which you plot the frequency of house trades per zip code area as a 'layer' for every in the dataset, see http://matplotlib.org/examples/mplot3d/index.html for an example.
   7. **Freestyle** Create a plot, which visualizes a fact hidden in the housing sales data, which you want to highlight to business people.
