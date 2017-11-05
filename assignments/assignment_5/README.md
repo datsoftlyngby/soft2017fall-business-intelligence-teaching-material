@@ -10,6 +10,13 @@ high-school math:
 To predict the outcome of a linear model you need to know the ``a`` and ``b``,
 so you can 'predict' the ``y`` value, when you input an ``x`` value.
 
+## How to hand in
+The hand-in (on Moodle) should be a link to a GitHub **release** containing a
+**single** file with the code and written text for the assignment parts
+  - This can either be a ``.ipynb``, ``.py``, ``.pdf`` or ``.md`` file
+  - The file must be clearly identifiable. Please name it accordingly.
+    (for instance ``report.pdf`` or ``assignment5.ipynb``)
+
 ## Part 1
 For this part we would like to predict how long a user has to be active
 on Hackernews to achieve 1000 points. In this experiment our input variable is
@@ -62,5 +69,9 @@ numbers?
 ## Part 5
 Now imagine you are a new Hackernews user with the only goal in life to reach
 1000 points.
-Does your model tell you anything about what it takes to get 1000
-points? And if so, how accurate is that prediction?
+
+Write four lines: Does your model tell you anything about what it takes to get
+1000 points? If so, what does it take?
+
+Write two lines: How accurate is that prediction? And how can it be made more
+accurate?
