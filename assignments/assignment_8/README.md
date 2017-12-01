@@ -16,7 +16,7 @@ least two lines of text.
 ## Part 2: Population and t-test
 Using the data from ``brain_size.csv``, we would like to learn something
 about the height of the people in the dataset and how it compares to the
-danish and human population.
+danish and american population.
 
 The data is taken from the scipy example at
 http://www.scipy-lectures.org/packages/statistics/index.html#student-s-t-test-the-simplest-statistical-test
@@ -28,7 +28,7 @@ can be used for.
 ### Part 2.2
 It turns out that the [average danish height is around 1.8 meters (71 inches)](https://en.wikipedia.org/wiki/List_of_average_human_height_worldwide).
 Run a t-test using ``scipy.stats.ttest_1samp`` on the height of the people
-in the dataset, assuming the mean height in the population is 31 inches.
+in the dataset, assuming the mean height in the population is 71 inches.
 Report the output and, using at least two lines of text, describe what the
 numbers tells us.
 
